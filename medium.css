@@ -11,6 +11,10 @@ body {
     background-color: white;
 }
 
+:root{--bg:#ffffff;--text:#000000}
+body.dark-mode{--bg:#121212;--text:#ffffff;background:var(--bg);color:var(--text)}
+body.dark-mode .navbar, body.dark-mode header{background:#1e1e1e !important}
+
 a {
     text-decoration: none;
     color: inherit;

@@ -18,6 +18,7 @@
         <a href="#">Write</a>
         <a href="#">Sign in</a>
         <a href="#" class="get-started">Get started</a>
+        <button id="theme-toggle">🌙 Dark</button>
       </nav>
     </header>         
 
@@ -58,5 +59,9 @@
       <a href="#" class="has-tooltip" data-tooltip="Terms of Service">Terms</a>
       <a href="https://speechify.com/medium" class="has-tooltip" data-tooltip="Listen with speechify.com/medium">Text to speech</a>
     </footer>
+  <script>
+  const t = document.getElementById('theme-toggle');
+  t.addEventListener('click', () => {document.body.classList.toggle('dark-mode');});
+  </script>
   </body>
 </html>
