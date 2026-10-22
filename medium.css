@@ -128,50 +128,52 @@ a {
 
 /* ILLUSTRATION AREA */
 
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1336px;
+    height: 520px;
+    margin: 0 auto;
+    padding: 0 64px;
+    box-sizing: border-box;
+}
+
+.main-content {
+    flex: 0 0 550px max-width 550px;
+}
+
 .main-art {
-    flex: 1;
-    min-height: 320px;
-    position: relative;
+    flex: 0 0 443px;
+    width: 443px;
+    height: 380px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    overflow: hidden;
 }
 
-.art-flower-top {
-    position: absolute;
-    top: 0;
-    right: 20%;
-    font-size: 110px;
-    color: #1a8917;
-    z-index: 2;
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
-.art-sparkles {
-    position: absolute;
-    left: 10%;
-    bottom: 25%;
-    font-size: 20px;
-    color: #242424;
-    letter-spacing: 8px;
+body.dark-mode .hero-img {
+    visibility: hidden !important;
 }
 
-.art-card {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 220px;
-    height: 180px;
-    background-color: #1a8917;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
+body.dark-mode .get-started,
+body.dark-mode .read-button {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #ffffff !important;
 }
 
-.hand-icon {
-    font-size: 60px;
-    color: #ffffff;
+body.dark-mode .get-started:hover,
+body.dark-mode .read-button:hover {
+    background-color: #e6e6e6 !important;
+    color: #000000 !important;
 }
 
 /* FOOTER */
