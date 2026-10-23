@@ -1,5 +1,3 @@
-
-
 * {
     box-sizing: border-box;
 }
@@ -11,9 +9,22 @@ body {
     background-color: white;
 }
 
-:root{--bg:#ffffff;--text:#000000}
-body.dark-mode{--bg:#121212;--text:#ffffff;background:var(--bg);color:var(--text)}
-body.dark-mode .navbar, body.dark-mode header{background:#1e1e1e !important}
+:root {
+    --bg: #ffffff;
+    --text: #000000
+}
+
+body.dark-mode {
+    --bg: #121212;
+    --text: #ffffff;
+    background: var(--bg);
+    color: var(--text)
+}
+
+body.dark-mode .navbar,
+body.dark-mode header {
+    background: #1e1e1e !important
+}
 
 a {
     text-decoration: none;
@@ -105,7 +116,7 @@ a {
     border-radius: 25px;
     font-size: 16px;
     transition: background-color 0.3s,
-                transform 0.3s;
+        transform 0.3s;
 }
 
 /* BUTTON HOVER EFFECT */
@@ -117,50 +128,52 @@ a {
 
 /* ILLUSTRATION AREA */
 
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1336px;
+    height: 520px;
+    margin: 0 auto;
+    padding: 0 64px;
+    box-sizing: border-box;
+}
+
+.main-content {
+    flex: 0 0 550px max-width 550px;
+}
+
 .main-art {
-    flex: 1;
-    min-height: 280px;
-    position: relative;
+    flex: 0 0 443px;
+    width: 443px;
+    height: 380px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    overflow: hidden;
 }
 
-.art-circle {
-    width: 220px;
-    height: 220px;
-    background-color: #b5d99c;
-    border-radius: 50%;
-    position: absolute;
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
-.art-card {
-    width: 190px;
-    height: 220px;
-    background-color: #176b35;
-    color: white;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    font-family: Georgia, serif;
-    font-size: 25px;
-    transform: rotate(-5deg);
+body.dark-mode .hero-img {
+    visibility: hidden !important;
 }
 
-.art-card span:first-child {
-    font-size: 40px;
+body.dark-mode .get-started,
+body.dark-mode .read-button {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #ffffff !important;
 }
 
-.art-flower {
-    position: absolute;
-    top: 0;
-    right: 10%;
-    color: #176b35;
-    font-size: 90px;
+body.dark-mode .get-started:hover,
+body.dark-mode .read-button:hover {
+    background-color: #e6e6e6 !important;
+    color: #000000 !important;
 }
 
 /* FOOTER */
@@ -256,6 +269,7 @@ a {
         font-size: 12px;
     }
 }
+
 footer {
     display: flex;
     justify-content: center;
@@ -288,12 +302,19 @@ footer {
     background-color: #000;
     transition: width 0.3s ease;
 }
+
 .footer a {
-    text-decoration: none; /* remove default */
+    text-decoration: none;
+    /* remove default */
 }
-.footer a:hover { color: #000; }
-    
-.footer a:hover::after { width: 100%; }
+
+.footer a:hover {
+    color: #000;
+}
+
+.footer a:hover::after {
+    width: 100%;
+}
 
 /* optional: very light lift on hover, not bouncy */
 .footer a:hover {
@@ -301,33 +322,43 @@ footer {
 }
 
 @keyframes footerIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Keep  media queries as they are */
-.has-tooltip { position: relative; }
+.has-tooltip {
+    position: relative;
+}
 
 .has-tooltip::before {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-8px);
-  background: #242424;
-  color: #fff;
-  padding: 7px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    background: #242424;
+    color: #fff;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .has-tooltip:hover::before {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-14px);
+    opacity: 1;
+    transform: translateX(-50%) translateY(-14px);
 }
+
 /* footer branch - Raliat's contribution */
