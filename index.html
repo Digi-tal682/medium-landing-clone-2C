@@ -1,48 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Medium 2026 - Human Stories & Ideas | Subgroup 2C Clone</title>
-  <link rel="icon" type="image/png" href="./favicon.png">
-  <link rel="stylesheet" href="medium.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medium Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="medium.css">
 </head>
-
 <body>
-  <!-- Navigation Bar -->
-  <header class="navbar">
+  <header class="header">
     <a href="#" class="logo">Medium</a>
-
-    <nav class="nav-links">
+    <nav class="nav">
       <a href="#">Our Story</a>
       <a href="#">Membership</a>
       <a href="#">Write</a>
       <a href="#">Sign in</a>
-      <a href="#" class="get-started">Get started</a>
-      <button id="theme-toggle">🌙 Dark</button>
+      <a href="#" class="btn-start">Get started</a>
+      <button id="theme-toggle" class="btn-dark">Dark</button>
     </nav>
   </header>
 
-  <!-- Main Section -->
-  <main>
-    <section class="main">
-      <div class="main-content">
-        <h1>Human<br />stories & ideas</h1>
-
-        <p>A place to read, write, and deepen your understanding</p>
-
-        <a href="#start" class="read-button"> Start reading </a>
-      </div>
-
-      <div class="main-art">
-        <img src="hero-illustration.jpg" alt="Medium hero illustration showing a green flower and hand writing"
-          class="hero-img" />
-      </div>
-    </section>
+  <main class="main">
+    <div class="hero-text">
+      <h1>Human<br>stories & ideas</h1>
+      <p>A place to read, write, and deepen your understanding</p>
+      <a href="#" class="link-start">Start reading</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://miro.medium.com/v2/format:webp/4*SdjkdS98aKH76I8eD0_qjw.png" alt="Medium illustration">
+    </div>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <a href="#" class="has-tooltip" data-tooltip="Help Center - Get support">Help</a>
     <a href="#" class="has-tooltip" data-tooltip="Check system status">Status</a>
@@ -54,13 +42,15 @@
     <a href="#" class="has-tooltip" data-tooltip="Privacy Policy">Privacy</a>
     <a href="#" class="has-tooltip" data-tooltip="Community Rules & Guidelines">Rules</a>
     <a href="#" class="has-tooltip" data-tooltip="Terms of Service">Terms</a>
-    <a href="https://speechify.com/medium" class="has-tooltip" data-tooltip="Listen with speechify.com/medium">Text to
-      speech</a>
+    <a href="https://speechify.com/medium" class="has-tooltip" data-tooltip="Listen with speechify.com/medium">Text to speech</a>
   </footer>
+
   <script>
-    const t = document.getElementById('theme-toggle');
-    t.addEventListener('click', () => { document.body.classList.toggle('dark-mode'); });
+    const btn = document.getElementById('theme-toggle');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      document.documentElement.classList.toggle('dark-mode');
+    });
   </script>
 </body>
-
 </html>
