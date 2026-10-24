@@ -189,3 +189,38 @@ body.dark-mode .has-tooltip::after {
   background: #ffffff;
   color: #000000;
 }
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 5%;
+  }
+  
+  .nav a {
+    display: none; /* hide Our Story, Membership, Write, Sign in */
+  }
+  
+  .nav .btn-start {
+    display: inline-block; /* keep only Get started */
+  }
+
+  .main {
+    flex-direction: column;
+    padding: 20px 5%;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 52px;
+  }
+
+  .hero-image {
+    display: none; /* hide big image on mobile like real Medium does */
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 5%;
+  }
+}
