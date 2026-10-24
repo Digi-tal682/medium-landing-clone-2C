@@ -189,38 +189,59 @@ body.dark-mode .has-tooltip::after {
   background: #ffffff;
   color: #000000;
 }
-/* Mobile Fix */
+/* Mobile - Stacked Nav Under Logo */
 @media (max-width: 768px) {
   .header {
-    padding: 15px 5%;
-  }
-  
-  .nav a {
-    display: none; /* hide Our Story, Membership, Write, Sign in */
-  }
-  
-  .nav .btn-start {
-    display: inline-block; /* keep only Get started */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 6%;
+    gap: 15px;
   }
 
+  .logo {
+    font-size: 32px;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 20px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* Show all nav links but smaller */
+  .nav a {
+    display: inline-block;
+    font-size: 13px;
+  }
+
+  .nav .btn-start, .nav #theme-toggle {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  /* Main content */
   .main {
     flex-direction: column;
-    padding: 20px 5%;
-    text-align: center;
+    padding: 25px 6%;
+    text-align: left;
   }
 
   .hero-text h1 {
-    font-size: 52px;
+    font-size: 48px;
+    line-height: 0.95;
   }
 
   .hero-image {
-    display: none; /* hide big image on mobile like real Medium does */
+    display: none;
   }
 
   .footer {
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 15px 5%;
+    gap: 10px 18px;
+    padding: 20px 6%;
+    justify-content: flex-start;
   }
 }
