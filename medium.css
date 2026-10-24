@@ -211,7 +211,6 @@ body.dark-mode .has-tooltip::after {
     justify-content: flex-start;
   }
 
-  /* Show all nav links but smaller */
   .nav a {
     display: inline-block;
     font-size: 13px;
@@ -222,7 +221,6 @@ body.dark-mode .has-tooltip::after {
     padding: 8px 14px;
   }
 
-  /* Main content */
   .main {
     flex-direction: column;
     padding: 25px 6%;
@@ -234,8 +232,18 @@ body.dark-mode .has-tooltip::after {
     line-height: 0.95;
   }
 
+  /* SHOW hero art on mobile */
   .hero-image {
-    display: none;
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
   }
 
   .footer {
